@@ -1,0 +1,194 @@
+/* =====================================================
+   ESTILOS GENERALES – Club Baby Fútbol Las Flores
+   ===================================================== */
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: #b30000;
+}
+
+a:hover {
+    color: #d40000;
+}
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+header {
+    background: linear-gradient(90deg, #b30000 0%, #d40000 100%);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* =====================================================
+   NAVEGACIÓN
+   ===================================================== */
+.navbar {
+    background-color: #212121 !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #b30000 !important;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #b30000 !important;
+}
+
+/* =====================================================
+   SECCIONES GENERALES
+   ===================================================== */
+section {
+    padding: 80px 0;
+}
+
+section h2 {
+    border-left: 6px solid #b30000;
+    padding-left: 12px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* =====================================================
+   SECCIÓN: EL CLUB
+   ===================================================== */
+#club {
+    background-color: #f9f9f9;
+}
+
+#club p {
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* =====================================================
+   SECCIÓN: PLANTELES
+   ===================================================== */
+#planteles .card {
+    border: none;
+    border-top: 4px solid #b30000;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#planteles .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   SECCIÓN: GALERÍA
+   ===================================================== */
+#galeria img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   SECCIÓN: CONTACTO
+   ===================================================== */
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* =====================================================
+   BOTONES Y ACCENTOS
+   ===================================================== */
+.btn-primary {
+    background-color: #b30000;
+    border-color: #b30000;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #d40000;
+    border-color: #d40000;
+}
+
+/* =====================================================
+   PIE DE PÁGINA
+   ===================================================== */
+footer {
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+/* =====================================================
+   RESPONSIVIDAD
+   ===================================================== */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    #planteles .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
