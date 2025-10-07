@@ -1,8 +1,5 @@
-/* =====================================================
-   ESTILOS GENERALES – Club Baby Fútbol Las Flores
-   ===================================================== */
 body {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #333;
     font-family: 'Poppins', sans-serif;
 }
@@ -22,9 +19,6 @@ a:hover {
     color: #d40000;
 }
 
-/* =====================================================
-   ENCABEZADO
-   ===================================================== */
 header {
     background: linear-gradient(90deg, #b30000 0%, #d40000 100%);
     color: #fff;
@@ -43,9 +37,6 @@ header p {
     font-weight: 300;
 }
 
-/* =====================================================
-   NAVEGACIÓN
-   ===================================================== */
 .navbar {
     background-color: #212121 !important;
 }
@@ -69,9 +60,6 @@ header p {
     color: #b30000 !important;
 }
 
-/* =====================================================
-   SECCIONES GENERALES
-   ===================================================== */
 section {
     padding: 80px 0;
 }
@@ -83,9 +71,6 @@ section h2 {
     font-size: 1.8rem;
 }
 
-/* =====================================================
-   SECCIÓN: EL CLUB
-   ===================================================== */
 #club {
     background-color: #f9f9f9;
 }
@@ -93,11 +78,9 @@ section h2 {
 #club p {
     font-size: 1.1rem;
     max-width: 800px;
+    margin: auto;
 }
 
-/* =====================================================
-   SECCIÓN: PLANTELES
-   ===================================================== */
 #planteles .card {
     border: none;
     border-top: 4px solid #b30000;
@@ -110,24 +93,54 @@ section h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* =====================================================
-   SECCIÓN: GALERÍA
-   ===================================================== */
-#galeria img {
-    border-radius: 10px;
+.carousel-multi .carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-multi .carousel-item {
+    flex: 0 0 auto;
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    width: 0;
+    z-index: 1;
+}
+
+.carousel-multi .carousel-item.active {
+    opacity: 1;
+    width: 70%;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+.carousel-multi .carousel-item.prev {
+    opacity: 0.5;
+    width: 15%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-multi .carousel-item.next {
+    opacity: 0.5;
+    width: 15%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-multi .main-img {
     width: 100%;
-    height: auto;
+    border-radius: 15px;
     object-fit: cover;
-    transition: transform 0.4s ease;
 }
 
-#galeria img:hover {
-    transform: scale(1.05);
-}
-
-/* =====================================================
-   SECCIÓN: CONTACTO
-   ===================================================== */
 #contacto ul {
     list-style: none;
     padding: 0;
@@ -138,9 +151,6 @@ section h2 {
     font-weight: 500;
 }
 
-/* =====================================================
-   BOTONES Y ACCENTOS
-   ===================================================== */
 .btn-primary {
     background-color: #b30000;
     border-color: #b30000;
@@ -155,9 +165,6 @@ section h2 {
     border-color: #d40000;
 }
 
-/* =====================================================
-   PIE DE PÁGINA
-   ===================================================== */
 footer {
     background-color: #212121;
     color: #fff;
@@ -166,29 +173,24 @@ footer {
     font-size: 0.9rem;
 }
 
-/* =====================================================
-   RESPONSIVIDAD
-   ===================================================== */
-@media (max-width: 992px) {
-    header h1 {
-        font-size: 2rem;
-    }
+@media (max-width: 1200px) {
+    .carousel-multi .carousel-item.active { width: 70%; }
+    .carousel-multi .carousel-item.prev,
+    .carousel-multi .carousel-item.next { width: 15%; }
+}
 
-    section {
-        padding: 60px 15px;
-    }
-
-    #planteles .card {
-        margin-bottom: 20px;
-    }
+@media (max-width: 768px) {
+    .carousel-multi .carousel-item.active { width: 70%; }
+    .carousel-multi .carousel-item.prev,
+    .carousel-multi .carousel-item.next { width: 10%; }
 }
 
 @media (max-width: 576px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
+    header h1 { font-size: 1.6rem; }
+    header p { font-size: 1rem; }
+    section { padding: 60px 15px; }
+    .carousel-multi .carousel-item.active { width: 70%; }
+    .carousel-multi .carousel-item.prev,
+    .carousel-multi .carousel-item.next { width: 5%; }
+    #planteles .card { margin-bottom: 20px; }
 }
